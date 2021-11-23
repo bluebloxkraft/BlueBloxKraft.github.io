@@ -44,6 +44,7 @@ ul li.active a{
 	float: left;
 	width: 150px;
 	height: auto;
+	margin-left: -74px;
 }
 
 .main{
