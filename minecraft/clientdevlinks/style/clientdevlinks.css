@@ -9,6 +9,10 @@
     transform: translate(-50%, -50%);
 }
 
+.links{
+    text-align: center;
+}
+
 .suggestion {
     position: absolute;
 	left: 50%;
