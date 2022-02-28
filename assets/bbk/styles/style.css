@@ -1,7 +1,12 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-family: Century Gothic;
+}
+
+@font-face {
+    /*---COPYRIGHT of Mojang AB---*/
+    font-family: "Minecraft";
+    src: url(../fonts/mc_font.ttf);
 }
 
 header{
@@ -50,6 +55,7 @@ ul li.active a{
 .main{
 	max-width: 1200px;
 	margin: auto;
+	font-family: Century Gothic;
 }
 
 .title{
@@ -57,9 +63,11 @@ ul li.active a{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	font-family: "Minecraft";	
+	
 }
 
 .title h1{
-	color: #fff;
+	color: rgb(0, 4, 255);
 	font-size: 70px;
 }
