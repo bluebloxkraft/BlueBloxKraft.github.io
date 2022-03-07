@@ -5,10 +5,30 @@
 	padding: 0;
 }
 
+/* stuff n' things */
 @font-face {
     /*---COPYRIGHT of Mojang AB---*/
     font-family: "Minecraft";
     src: url(../fonts/mc_font.ttf);
+}
+
+@keyframes animFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes animFadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+	
 }
 
 header{
@@ -23,6 +43,7 @@ ul{
 	list-style-type: none;
 	margin-top: 16px;
 	margin-right: -74px;
+	animation: animFadeIn 1s;
 }
 
 ul li{
@@ -52,6 +73,7 @@ ul li.active a{
 	width: 150px;
 	height: auto;
 	margin-left: -74px;
+	animation: animFadeIn 1s;
 }
 
 .main{
@@ -66,10 +88,10 @@ ul li.active a{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: "Minecraft";	
-	
 }
 
 .title h1{
 	color: rgb(0, 4, 255);
 	font-size: 70px;
+	animation: animFadeIn 1s;
 }
