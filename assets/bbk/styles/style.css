@@ -48,7 +48,7 @@ ul{
 	list-style-type: none;
 	margin-top: 16px;
 	margin-right: -74px;
-	animation: animFadeIn 1s;
+	animation: animFadeIn 2s;
 }
 
 ul li{
@@ -78,7 +78,7 @@ ul li.active a{
 	width: 150px;
 	height: auto;
 	margin-left: -74px;
-	animation: animFadeIn 1s;
+	animation: animFadeIn 2s;
 }
 
 .main{
@@ -98,5 +98,5 @@ ul li.active a{
 .title h1{
 	color: rgb(0, 4, 255);
 	font-size: 70px;
-	animation: animFadeIn 1s;
+	animation: animFadeIn 2s;
 }
