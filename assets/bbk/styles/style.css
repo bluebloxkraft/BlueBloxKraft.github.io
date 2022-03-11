@@ -87,6 +87,21 @@ ul li.active a{
 	font-family: Century Gothic;
 }
 
+.desc{
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	animation: animFadeIn 4s;
+}
+
+.desc a{
+	color: darkturquoise;
+	text-decoration: none;
+}
+
 .title{
 	position: absolute;
 	top: 50%;
