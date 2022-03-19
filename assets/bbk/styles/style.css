@@ -36,6 +36,15 @@ body{
 	
 }
 
+@keyframes rotate {
+	0% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+}
+
 header{
 	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../textures/img.jpg);
 	height: 100vh;
@@ -73,12 +82,19 @@ ul li.active a{
 	color: #000;
 }
 
+.logo{
+	animation: animFadeIn 2s;
+	animation-fill-mode: backwards;
+}
+
 .logo img{
 	float: left;
 	width: 150px;
 	height: auto;
 	margin-left: -74px;
-	animation: animFadeIn 2s;
+	animation-name: rotate;
+	animation-duration: 2s;
+	animation-delay: 2s;
 }
 
 .main{
@@ -94,7 +110,10 @@ ul li.active a{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, 50%);
-	animation: animFadeIn 4s;
+	animation-name: animFadeIn;
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-fill-mode: backwards;
 }
 
 .desc a{
