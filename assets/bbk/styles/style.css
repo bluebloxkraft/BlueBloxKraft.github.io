@@ -91,7 +91,7 @@ ul li.active a {
 
 .logo img {
 	position: fixed;
-	top: 5px;
+	top: -10px;
 	left: 85px;
 	width: 150px;
 	height: auto;
