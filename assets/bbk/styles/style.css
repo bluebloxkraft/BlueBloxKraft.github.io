@@ -5,7 +5,7 @@
 	padding: auto;
 }
 
-body{
+body {
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
@@ -45,26 +45,28 @@ body{
 	}
 }
 
-header{
+header {
 	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../textures/img.jpg);
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
 }
 
-ul{
+ul {
+	position: fixed;
 	float: right;
 	list-style-type: none;
+	right: 85px;
 	margin-top: 16px;
 	margin-right: -74px;
 	animation: animFadeIn 2s;
 }
 
-ul li{
+ul li {
 	display: inline-block;
 }
 
-ul li a{
+ul li a {
 	text-decoration: none;
 	color: #6c74f6;
 	padding: 5px;
@@ -72,38 +74,55 @@ ul li a{
 	transition: 0.2s ease;
 }
 
-ul li a:hover{
+ul li a:hover {
 	background-color: #6c74f6;
 	color: #000;
 }
 
-ul li.active a{
+ul li.active a {
 	background-color: #6c74f6;
 	color: #000;
 }
 
-.logo{
+.logo {
 	animation: animFadeIn 2s;
 	animation-fill-mode: backwards;
 }
 
-.logo img{
-	float: left;
+.logo img {
+	position: fixed;
+	top: 5px;
+	left: 85px;
 	width: 150px;
 	height: auto;
 	margin-left: -74px;
+}
+
+.watermark {
+	animation: animFadeIn 2s;
+	animation-fill-mode: backwards;
+}
+
+.watermark img {
+	width: 60px;
+	height: auto;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	opacity: 0.5;
+	z-index: 99;
 	animation-name: rotate;
 	animation-duration: 2s;
 	animation-delay: 2s;
 }
 
-.main{
+.main {
 	max-width: 1200px;
 	margin: auto;
 	font-family: Century Gothic;
 }
 
-.desc{
+.desc {
 	color: #fff;
 	text-align: center;
 	position: absolute;
@@ -116,22 +135,22 @@ ul li.active a{
 	animation-fill-mode: backwards;
 }
 
-.desc a{
+.desc a {
 	color: rgb(0, 206, 190);
 	text-decoration: none;
 }
 
-.desc a:hover{
+.desc a:hover {
 	color: rgb(0, 0, 255);
 	text-decoration: none;
 }
 
-.desc a.active{
+.desc a.active {
 	color: rgb(0, 255, 255);
 	text-decoration: none;
 }
 
-.title{
+.title {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -139,7 +158,7 @@ ul li.active a{
 	font-family: "Minecraft";	
 }
 
-.title h1{
+.title h1 {
 	color: rgb(0, 4, 255);
 	font-size: 70px;
 	animation: animFadeIn 2s;
