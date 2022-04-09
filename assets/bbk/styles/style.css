@@ -45,9 +45,15 @@ body {
 	}
 }
 
-header {
+.bg-img {
 	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../textures/img.jpg);
 	height: 100vh;
+	filter: blur(4px);
+	transform: scale(1.1);
+}
+
+header {
+
 	background-size: cover;
 	background-position: center;
 }
@@ -57,7 +63,7 @@ ul {
 	float: right;
 	list-style-type: none;
 	right: 85px;
-	margin-top: 16px;
+	margin-top: -640px;
 	margin-right: -74px;
 	animation: animFadeIn 2s;
 }
@@ -150,6 +156,10 @@ ul li.active a {
 	animation-name: rotate;
 	animation-duration: 2s;
 	animation-delay: 2s;
+}
+
+.watermark:hover img {
+	animation: rotate 2s infinite;
 }
 
 .main {
