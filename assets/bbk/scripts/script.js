@@ -13,6 +13,3 @@ function(e) {
            window.open(ytLink);
        }
 })
-
-var url = window.location.search;
-var redirect = new URLSearchParams(url).get("redirect");
