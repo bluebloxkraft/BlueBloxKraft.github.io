@@ -1,4 +1,4 @@
-/* CSS of bluebloxkraft.github.io aka my website :)*/
+/* hi */
 
 *{
 	margin: 0;
@@ -10,9 +10,7 @@ body {
 	overflow-y: hidden;
 }
 
-/* stuff n' things */
 @font-face {
-    /*---COPYRIGHT of Mojang AB---*/
     font-family: "Minecraft";
     src: url(../fonts/mc_font.ttf);
 }
