@@ -182,6 +182,7 @@ ul li.active a {
 .desc a {
 	color: rgb(0, 206, 190);
 	text-decoration: none;
+	transition: 0.2s ease;
 }
 
 .desc a:hover {
