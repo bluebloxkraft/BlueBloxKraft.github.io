@@ -75,7 +75,7 @@ ul li a {
 	color: #6c74f6;
 	padding: 5px;
 	border: 1px solid #6c74f6;
-	transition: 0.2s ease;
+	transition: 0.5s ease;
 }
 
 ul li a:hover {
