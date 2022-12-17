@@ -91,6 +91,7 @@ ul li.active a {
 .tooltip {
 	position: relative;
 	display: inline-block;
+	transition: 0.5 ease
 }
   
 .tooltip .tooltiptext {
