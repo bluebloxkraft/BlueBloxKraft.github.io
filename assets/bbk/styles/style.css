@@ -173,7 +173,7 @@ ul li.active a {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 50%);
+	transform: translate(-50%, 100%);
 	animation-name: animFadeIn;
 	animation-duration: 2s;
 	animation-delay: 1s;
