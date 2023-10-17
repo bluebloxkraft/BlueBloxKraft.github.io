@@ -125,7 +125,8 @@ ul li.active a {
 	visibility: visible;
 }
 
-.logo {
+.logo 
+	display: none;
 	animation: animFadeIn 2s;
 	animation-fill-mode: backwards;
 }
