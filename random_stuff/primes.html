@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--this was not entirely made by me. i used GPT for a lot of the code-->
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculate the nth prime number.</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function getNthPrime(n){
+
+            function soe(m){
+                let primes = Array(m+1).fill(true);
+                primes[0] = primes[1] = false;
+                for (let i = 2; i <= Math.sqrt(m); i++) {
+                    if (primes[i]) {
+                        for (let j = i * i; j <= m; j += i) {
+                            primes[j] = false;
+                        }
+                    }
+                }
+                return primes.reduce((a, b) => a + b, 0);
+            }
+
+            x=1;
+            while(soe(x) < n){
+                x++;
+            }
+
+            return x;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("calc").addEventListener("click", function() {
+                var n = document.getElementById("number").value;
+                var answer = getNthPrime(n);
+                
+                console.log("The prime number of index " + n + " is: " + answer);
+                document.getElementById("ans").innerHTML = "Ans: " + answer;
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Prime numbers!</h1>
+    <p>Enter a whole number in the box below to get the nth prime number.</p>
+    <input type="text" id="number">
+    <button id="calc">Calculate</button>
+    <p>&nbsp</p>
+    <p id="ans">Ans:</p>
+</body>
+</html>
