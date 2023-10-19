@@ -4,11 +4,14 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Calculate the nth prime number.</title>
+    <title>Calculate the nth prime number</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="author" content="BlueBloxKraft">
+    <meta name="description" content="This page is for calculating prime numbers. I made it as a fun project!">
+    
     <script>
         function getNthPrime(n){
-
+                
             function soe(m){
                 let primes = Array(m+1).fill(true);
                 primes[0] = primes[1] = false;
@@ -44,10 +47,12 @@
 </head>
 <body>
     <h1>Prime numbers!</h1>
-    <p>Enter a whole number in the box below to get the nth prime number.</p>
+    <p>Enter a whole number, n in the box below to get the nth prime number.</p>
     <input type="text" id="number">
     <button id="calc">Calculate</button>
-    <p>&nbsp</p>
     <p id="ans">Ans:</p>
+    <h1>&nbsp</h1>
+    <h1>&nbsp</h1>
+    <footer>If you want to copy the code of this page, <a href="https://raw.githubusercontent.com/blueBloxKraft/BlueBloxKraft.github.io/main/random_stuff/primes.html">click here!</a></footer>
 </body>
 </html>
