@@ -50,6 +50,33 @@ body {
 	transform: scale(1.1);
 }
 
+@keyframes glowAnim {
+	0% {
+		text-shadow: 
+                0 0 5px #00BFFF, 
+                0 0 10px #00BFFF, 
+                0 0 15px #00BFFF, 
+                0 0 20px #1E90FF,
+				0 0 2px #00bfff;
+	}
+	50% {
+		text-shadow: 
+                0 0 0px #00BFFF, 
+                0 0 0px #00BFFF, 
+                0 0 0px #00BFFF, 
+                0 0 0px #1E90FF,
+				0 0 2px #00bfff;
+	}
+	100% {
+		text-shadow: 
+                0 0 5px #00BFFF, 
+                0 0 10px #00BFFF, 
+                0 0 15px #00BFFF, 
+                0 0 20px #1E90FF,
+				0 0 2px #00bfff;
+	}
+}
+
 header {
 
 	background-size: cover;
@@ -61,7 +88,7 @@ ul {
 	float: right;
 	list-style-type: none;
 	right: 85px;
-	margin-top: -640px;
+	margin-top: -624px;
 	margin-right: -74px;
 	animation: animFadeIn 2s;
 }
@@ -75,7 +102,7 @@ ul li a {
 	color: #6c74f6;
 	padding: 5px;
 	border: 1px solid #6c74f6;
-	transition: 0.5s ease;
+	transition: 0.25s ease;
 }
 
 ul li a:hover {
@@ -91,7 +118,7 @@ ul li.active a {
 .tooltip {
 	position: relative;
 	display: inline-block;
-	transition: 0.5 ease;
+	transition: 0.5s ease;
 }
   
 .tooltip .tooltiptext {
@@ -126,18 +153,21 @@ ul li.active a {
 }
 
 .logo {
-	display: none;
 	animation: animFadeIn 2s;
 	animation-fill-mode: backwards;
+	position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 .logo img {
-	position: fixed;
 	top: -10px;
 	left: 85px;
 	width: 150px;
 	height: auto;
 	margin-left: -74px;
+	position: fixed;
+    width: 150px;
 }
 
 .watermark {
@@ -156,11 +186,12 @@ ul li.active a {
 	animation-name: rotate;
 	animation-duration: 2s;
 	animation-delay: 2s;
+	animation-iteration-count: infinite;
 }
 
-.watermark:hover img {
+/* .watermark:hover img {
 	animation: rotate 2s infinite;
-}
+} */
 
 .main {
 	max-width: 1200px;
@@ -202,11 +233,13 @@ ul li.active a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-family: "Minecraft";	
+	font-family: "Minecraft";
+	animation: glowAnim 5s infinite;
 }
 
 .title h1 {
-	color: rgb(0, 4, 255);
+/*	color: rgb(0, 4, 255); */
+	color: black;
 	font-size: 70px;
 	animation: animFadeIn 2s;
 }
