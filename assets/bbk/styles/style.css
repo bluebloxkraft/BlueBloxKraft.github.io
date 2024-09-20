@@ -48,6 +48,7 @@ body {
 	height: 100vh;
 	filter: blur(4px);
 	transform: scale(1.1);
+	z-index: 0;
 }
 
 @keyframes glowAnim {
@@ -78,7 +79,6 @@ body {
 }
 
 header {
-
 	background-size: cover;
 	background-position: center;
 }
@@ -118,7 +118,6 @@ ul li.active a {
 .tooltip {
 	position: relative;
 	display: inline-block;
-	transition: 0.5s ease;
 }
   
 .tooltip .tooltiptext {
@@ -131,7 +130,7 @@ ul li.active a {
 	border-radius: 6px;
 	padding: 5px 0;
 	position: absolute;
-	z-index: 1;
+	z-index: 5;
 	top: 170%;
 	left: 50%;
 	margin-left: -60px;
@@ -152,15 +151,8 @@ ul li.active a {
 	visibility: visible;
 }
 
-.logo {
-	animation: animFadeIn 2s;
-	animation-fill-mode: backwards;
-	position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
 .logo img {
+	animation: animFadeIn 4s;
 	top: -10px;
 	left: 85px;
 	width: 150px;
@@ -168,6 +160,7 @@ ul li.active a {
 	margin-left: -74px;
 	position: fixed;
     width: 150px;
+	z-index: 0;
 }
 
 .watermark {
@@ -193,14 +186,25 @@ ul li.active a {
 	animation: rotate 2s infinite;
 } */
 
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
 .main {
 	max-width: 1200px;
 	margin: auto;
 	font-family: Century Gothic;
+	z-index: 3;
 }
 
 .desc {
 	color: #fff;
+	text-shadow: 0 0 4px #000;
 	text-align: center;
 	position: absolute;
 	top: 50%;
