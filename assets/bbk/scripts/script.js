@@ -29,7 +29,7 @@ function logoBoucyThingy() {
         posX += speedX;
         posY += speedY;
 
-        bbkLogoPos = [posX, posY + 30];
+        bbkLogoPos = [posX + 75, posY + 30];
 
         const logoW = logo.clientWidth;
         const logoH = logo.clientHeight;
@@ -109,18 +109,19 @@ function particles() {
         ctx.lineWidth = 0.25;
         ctx.strokeStyle = 'rgba(255, 255, 255, 127)';
         ctx.stroke();
+        ctx.closePath();
     }
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         particles.forEach((particle, index) => {
             particle.update();
-
+            
             particles.forEach((p) => {
                 if (particle != p && particle.getDistanceToParticle(p) <= 100) {
                     drawLine(particle.x, particle.y, p.x, p.y);
                 }
-            })
+            });
 
             if (particle.getDistanceTo(bbkLogoPos[0], bbkLogoPos[1]) <= 150) {
                 drawLine(particle.x, particle.y, bbkLogoPos[0], bbkLogoPos[1]);
@@ -147,15 +148,14 @@ function particles() {
             particles.forEach(p => {
                 let distToMouse = p.getDistanceTo(mouseX, mouseY);
 
-                p.x += dMX * Math.pow(distToMouse, -2) * 1000;
-                p.y += dMY * Math.pow(distToMouse, -2) * 1000;
+                p.x += dMX * Math.pow(distToMouse, -2.5) * 1000;
+                p.y += dMY * Math.pow(distToMouse, -2.5) * 1000;
             });
         }
 
         mouseX = event.clientX;
         mouseY = event.clientY;
     });
-
 
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
@@ -164,6 +164,11 @@ function particles() {
 
     init();
     animate();
-
-
 }
+
+document.addEventListener('mousemove',(event) => {
+    xOffset = event.clientX / window.innerWidth * 10;
+    yOffset = event.clientY / window.innerHeight * 10;
+
+    document.getElementById('bg-img').style.backgroundPosition = `${xOffset}px ${yOffset}px`;
+});

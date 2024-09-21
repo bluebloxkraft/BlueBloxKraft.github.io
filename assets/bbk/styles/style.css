@@ -11,7 +11,7 @@ body {
 }
 
 @font-face {
-	font-family: "Minecraft";
+	font-family: "minecraft";
 	src: url(../fonts/mc_font.ttf);
 }
 
@@ -46,14 +46,6 @@ body {
 	}
 }
 
-.bg-img {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../textures/img.jpg);
-	height: 100vh;
-	filter: blur(4px);
-	transform: scale(1.1);
-	z-index: 0;
-}
-
 @keyframes glowAnim {
 	0% {
 		text-shadow:
@@ -83,6 +75,15 @@ body {
 	}
 }
 
+.bg-img {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../textures/img.jpg);
+	background-size: cover;
+	height: 100vh;
+	filter: blur(10px);
+	transform: scale(1.5);
+	z-index: 0;
+}
+
 header {
 	background-size: cover;
 	background-position: center;
@@ -90,11 +91,9 @@ header {
 
 ul {
 	position: fixed;
-	float: right;
 	list-style-type: none;
-	right: 85px;
-	margin-top: -624px;
-	margin-right: -74px;
+	right: 20px;
+	top: 20px;
 	animation: animFadeIn 2s;
 }
 
@@ -158,13 +157,9 @@ ul li.active a {
 
 .logo img {
 	animation: animFadeIn 4s;
-	top: -10px;
-	left: 85px;
 	width: 150px;
-	height: auto;
-	margin-left: -74px;
+	height: 60px;
 	position: fixed;
-	width: 150px;
 	z-index: 0;
 }
 
@@ -243,7 +238,7 @@ canvas {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-family: "Minecraft";
+	font-family: "minecraft";
 	animation: glowAnim 5s infinite;
 }
 
