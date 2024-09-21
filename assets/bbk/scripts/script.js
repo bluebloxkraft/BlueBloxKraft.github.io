@@ -22,8 +22,8 @@ function logoBoucyThingy() {
     let posX = Math.random() * (window.innerWidth - 100);
     let posY = Math.random() * (window.innerHeight - 100);
 
-    let speedX = 2;
-    let speedY = 2;
+    let speedX = 1;
+    let speedY = 1;
 
     function animate() {
         posX += speedX;
@@ -65,8 +65,8 @@ function particles() {
             this.x = x;
             this.y = y;
             this.size = Math.random() * 5 + 1;
-            this.speedX = Math.random() * 3 - 1.5;
-            this.speedY = Math.random() * 3 - 1.5;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
             this.color = 'rgba(255, 255, 255, 0.8)';
         }
 
@@ -74,7 +74,7 @@ function particles() {
             this.x += this.speedX;
             this.y += this.speedY;
 
-            if (this.size > 0.2) this.size -= 0.1;
+            if (this.size > 0.2) this.size -= 0.05;
         }
 
         draw() {
@@ -167,8 +167,8 @@ function particles() {
 }
 
 document.addEventListener('mousemove',(event) => {
-    xOffset = event.clientX / window.innerWidth * 10;
-    yOffset = event.clientY / window.innerHeight * 10;
+    xOffset = (event.clientX / window.innerWidth - .5)* 10;
+    yOffset = (event.clientY / window.innerHeight - .5) * 10;
 
     document.getElementById('bg-img').style.backgroundPosition = `${xOffset}px ${yOffset}px`;
 });
